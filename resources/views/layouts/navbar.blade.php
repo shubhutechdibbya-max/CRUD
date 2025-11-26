@@ -1,9 +1,16 @@
+
+
 <header class="bg-gray-900 text-white">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
 
             <!-- Logo -->
-            <a href="/" class="text-2xl font-bold">Blog</a>
+            <a href="/blogs" class="text-1xl font-bold">
+                @if(Auth::check())
+                    <span>Welcome!{{ Auth::user()->name }}</span>
+                @else
+                    <span>Guest</span>
+                @endif</a>
 
             <!-- Mobile Menu Button -->
             <button id="menuBtn" class="lg:hidden text-white focus:outline-none">
@@ -22,9 +29,14 @@
             </ul>
             <!-- Login & Sign Up Buttons -->
                 <div class="flex items-center space-x-4">
-                    <a href="/login"
+                    
+                    <a href="{{ url('logout') }}"
                        class="px-2 py-1 border bg-red-500 rounded-md hover:bg-green-600 transition">
-                        Logout
+                        @if(Auth::check())
+                       <span>Logout</span>
+                        @else
+                            <span>Login</span>
+                        @endif
                     </a>
 
                     
@@ -40,9 +52,14 @@
 
             <!-- Login & Sign Up Buttons -->
                 <div class="flex items-center space-x-4">
-                    <a href="/login"
+                    
+                    <a href="{{ url('logout') }}"
                        class="px-4 py-2 border border-red-300 rounded-md hover:bg-gray-700 transition">
-                        Logout
+                        @if(Auth::check())
+                       <span>Logout</span>
+                        @else
+                            <span>Login</span>
+                        @endif
                     </a>
 
                     

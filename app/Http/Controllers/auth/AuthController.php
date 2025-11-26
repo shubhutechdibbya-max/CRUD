@@ -45,5 +45,10 @@ class AuthController extends Controller
       }
     }
 
+    function logout(){
+        Auth::logout();
+        return view('auth.login');
+    }
+
     
 }
