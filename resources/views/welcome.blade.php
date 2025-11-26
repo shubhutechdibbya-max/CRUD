@@ -1,6 +1,1 @@
-@extends('layouts.master')
-
-@section('content')
-
-
-@endsection
+@include('auth.register')

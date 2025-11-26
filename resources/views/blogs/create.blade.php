@@ -4,7 +4,8 @@
 <div class="container mx-auto px-4 py-6 max-w-3xl">
 
     <div class="bg-white shadow-md rounded-2xl p-6">
-        <h2 class="text-xl font-bold mb-4">Create New Blog</h2>
+        {{-- <h6 class="text-xl font-bold mb-4">Welcome!
+Use the form below to publish a new blog post on website. Please provide a clear title, engaging content, and a relevant category.</h6> --}}
 
         <form id="blogForm" action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf

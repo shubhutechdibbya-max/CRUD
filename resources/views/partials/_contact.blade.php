@@ -1,5 +1,5 @@
 <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-lg p-8 mt-10">
-  <h2 class="text-3xl font-bold mb-6 text-center text-green-700">Contact Us</h2>
+  <h2 class="text-3xl font-bold mb-6 text-center text-green-700">We’d Love to Hear From You!</h2>
   
   <form action="{{ url('send-email') }}" method="POST" class="space-y-6">
     @csrf
